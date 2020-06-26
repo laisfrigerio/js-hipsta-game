@@ -44,6 +44,24 @@ const matrixEnemy = [
     [208, 626],
     [312, 626],
 ];
+let matrixCharacter = [
+    [0,0],
+    [220,0],
+    [440,0],
+    [660,0],
+    [0, 270],
+    [220, 270],
+    [440, 270],
+    [660, 270],
+    [0, 540],
+    [220, 540],
+    [440, 540],
+    [660, 540],
+    [0, 810],
+    [220, 810],
+    [440, 810],
+    [660, 810],
+];
 
 let mainCharacterHeight = 135;
 let play = false;
@@ -58,18 +76,26 @@ const sketch = (p) => {
 
     p.setup = () => {
         p.createCanvas(p.windowWidth - 100, p.windowHeight - 200);
-        p.frameRate(40);
+        p.frameRate(100);
         scenario = new Scenario(p, scenarioImage, 3);
-        character = new Character(p, characterImage, mainCharacterHeight);
+        character = new Character(p,matrixCharacter, characterImage, 0, 110, 135, 220, 270);
         enemy = new Enemy(p, matrixEnemy, enemyImage, p.width - 52, 52, 52, 104, 104);
+    }
+
+    p.keyPressed = () => {
+        if (p.key === 'ArrowUp') {
+            character.jump();
+        }
     }
 
     p.draw = () => {
         scenario.exibe();
         if (play) {
             scenario.move();
-            character.exibe();
+            character.show();
+            character.applyGravity();
             enemy.show();
+            enemy.move();
         }
     }
 }
