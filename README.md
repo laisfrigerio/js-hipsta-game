@@ -1,6 +1,6 @@
 # Hispta Game (p5js)
 
-A bruxinha hispta está totalmente perdida na floresta e constantemente fugindo das gotinhas de vírus (corona vírus).
+A bruxinha hipsta está totalmente perdida na floresta e constantemente fugindo das gotinhas de vírus (corona vírus).
 
 ## Aula 1 - Imersão GAME DEV Alura
 
