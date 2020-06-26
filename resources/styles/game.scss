@@ -1,0 +1,45 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background-color: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+canvas {
+    border: 1px solid #4e4d4d;
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+}
+
+.btn {
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    margin-top: 50px;
+    padding: 10px;
+
+    &:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    &#play {
+        border: 1px solid #83a421;
+        color: #83a421;
+    }
+
+    &#pause {
+        border: 1px solid yellow;
+        color: yellow;
+    }
+}
