@@ -15,7 +15,7 @@ A bruxinha hipsta está totalmente perdida na floresta e constantemente fugindo 
 
 ## Run
 
-Execute os seguintes em duas do terminal seperadamente:
+Execute os seguintes em duas abas no terminal seperadamente:
 
 - `npm run server`
 - `npm run build`
