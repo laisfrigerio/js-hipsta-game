@@ -1,35 +1,36 @@
 import * as p5 from "p5";
 import "p5/lib/addons/p5.sound";
-import Cenario from './components/Cenario';
-import Personagem from './components/Personagem';
 
-let imagemCenario;
-let imagemPersonagem;
+import Scenario from './components/Scenario';
+import Character from './components/Character';
+
+let scenarioImage;
+let characterImage;
 let gameAudio;
-let hipstaHeight = 135;
-let cenario;
-let personagem;
+let mainCharacterHeight = 135;
+let scenario;
+let character;
 let play = false
 
 const sketch = (p) => {
     p.preload = () => {
-        imagemCenario = p.loadImage("images/cenario/floresta.png");
-        imagemPersonagem = p.loadImage("images/personagem/correndo.png");
-        gameAudio = p.loadSound("audios/trilha_jogo.mp3");
+        scenarioImage = p.loadImage("images/scenario/jungle.png");
+        characterImage = p.loadImage("images/character/running.png");
+        gameAudio = p.loadSound("audios/game-track.mp3");
     }
 
     p.setup = () => {
         p.createCanvas(p.windowWidth - 100, p.windowHeight - 200);
         p.frameRate(40);
-        cenario = new Cenario(p, imagemCenario, 3);
-        personagem = new Personagem(p, imagemPersonagem, hipstaHeight);
+        scenario = new Scenario(p, scenarioImage, 3);
+        character = new Character(p, characterImage, mainCharacterHeight);
     }
 
     p.draw = () => {
-        cenario.exibe();
+        scenario.exibe();
         if (play) {
-            cenario.move();
-            personagem.exibe();
+            scenario.move();
+            character.exibe();
         }
     }
 }

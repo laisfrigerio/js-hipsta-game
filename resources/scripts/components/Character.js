@@ -1,4 +1,4 @@
-class Personagem {
+class Character {
 
     constructor(p5, image, height) {
         this.p5 = p5;
@@ -40,4 +40,4 @@ class Personagem {
     }
 }
 
-export default Personagem;
+export default Character;

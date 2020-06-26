@@ -1,4 +1,4 @@
-class Cenario {
+class Scenario {
     constructor(p5, image, velocity) {
         this.p5 = p5;
         this.image = image;
@@ -26,4 +26,4 @@ class Cenario {
     }
 }
 
-export default Cenario;
+export default Scenario;
