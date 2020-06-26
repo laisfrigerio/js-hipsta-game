@@ -78,7 +78,7 @@ const sketch = (p) => {
         p.createCanvas(p.windowWidth - 100, p.windowHeight - 200);
         p.frameRate(100);
         scenario = new Scenario(p, scenarioImage, 3);
-        character = new Character(p,matrixCharacter, characterImage, 0, 110, 135, 220, 270);
+        character = new Character(p,matrixCharacter, characterImage, 0, 110, mainCharacterHeight, 220, 270);
         enemy = new Enemy(p, matrixEnemy, enemyImage, p.width - 52, 52, 52, 104, 104);
     }
 
@@ -90,11 +90,11 @@ const sketch = (p) => {
 
     p.draw = () => {
         scenario.exibe();
+        character.show(play);
+        enemy.show(play);
         if (play) {
             scenario.move();
-            character.show();
             character.applyGravity();
-            enemy.show();
             enemy.move();
         }
     }

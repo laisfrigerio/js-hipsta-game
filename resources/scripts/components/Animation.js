@@ -12,9 +12,11 @@ class Animation {
         this.currentPostion = 0;
     }
 
-    show () {
+    show (play) {
         this.p5.image(this.image, this.x, this.y, this.width, this.height, this.matrix[this.currentPostion][0], this.matrix[this.currentPostion][1], this.widthSprite, this.heightSprite);
-        this.animate();
+        if (play) {
+            this.animate();
+        }
     }
 
     animate() {
