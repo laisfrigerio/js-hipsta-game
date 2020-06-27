@@ -7,7 +7,7 @@ class Scenario {
         this.x2 = this.p5.width;
     }
 
-    exibe() {
+    show() {
         this.p5.image(this.image, this.x1 , 0, this.p5.width, this.p5.height);
         this.p5.image(this.image, this.x2 , 0, this.p5.width, this.p5.height);
     }

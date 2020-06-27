@@ -22,6 +22,10 @@ class Character extends Animation {
             this.y = this.yInital;
         }
     }
+
+    checkCollision(enemy) {
+        return this.p5.collideRectRect(this.x, this.y, this.width, this.height, enemy.x, enemy.y, enemy.width, enemy.height);
+    }
 }
 
 export default Character;

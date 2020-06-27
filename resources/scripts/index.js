@@ -1,4 +1,5 @@
 import * as p5 from "p5";
+import "p5.collide2d";
 import "p5/lib/addons/p5.sound";
 
 import Character from './components/Character';
@@ -89,13 +90,17 @@ const sketch = (p) => {
     }
 
     p.draw = () => {
-        scenario.exibe();
+        scenario.show();
         character.show(play);
         enemy.show(play);
         if (play) {
             scenario.move();
             character.applyGravity();
             enemy.move();
+
+            if (character.checkCollision(enemy)) {
+                console.log('is colliding')
+            }
         }
     }
 }
