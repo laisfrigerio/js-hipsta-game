@@ -4,7 +4,7 @@ A bruxinha hipsta está totalmente perdida na floresta e constantemente fugindo 
 
 ## Imersão GAME DEV Alura
 
-![Aula 2 - Alura Imersão Game Dev](https://raw.githubusercontent.com/laisfrigerio/js-hipsta-game/master/screenshots/second-class.gif)
+![Aula 2 - Alura Imersão Game Dev](https://github.com/laisfrigerio/js-hipsta-game/blob/aula-02/screenshots/second-class.gif)
 
 ## Gifs
 
