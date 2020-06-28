@@ -1,4 +1,4 @@
-# Hispta Game (p5js)
+# Hipsta Game (p5js)
 
 A bruxinha hipsta está totalmente perdida na floresta e constantemente fugindo das gotinhas de vírus (corona vírus).
 
