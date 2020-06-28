@@ -1,9 +1,7 @@
 function setup() {
     createCanvas(windowWidth - 100, windowHeight - 200);
     frameRate(100);
-    scenario = new Scenario(scenarioImage, 3);
-    witchCharacter = new Witch(witchCharacterMatrix, witchCharacterImage, 0, 110, mainCharacterHeight, 220, 270);
-    bubbleEnemy = new Bubble(bubbleEnemyMatrix, bubbleEnemyImage, width - 52, 52, 52, 104, 104);
+    init();
 }
 
 function keyPressed() {
@@ -23,6 +21,8 @@ function draw() {
         bubbleEnemy.move();
         if (witchCharacter.checkCollision(bubbleEnemy)) {
             pauseSound();
+            alert("Game over");
+            init();
         }
     }
 }
@@ -43,4 +43,14 @@ function playSound() {
 function pauseSound() {
     gameAudio.pause();
     play = false;
+}
+
+/**
+ * Init/Reset game
+ */
+function init() {
+    play = false;
+    scenario = new Scenario(scenarioImage, 3);
+    witchCharacter = new Witch(witchCharacterMatrix, witchCharacterImage, 0, 110, mainCharacterHeight, 220, 270);
+    bubbleEnemy = new Bubble(bubbleEnemyMatrix, bubbleEnemyImage, width - 52, 52, 52, 104, 104);
 }

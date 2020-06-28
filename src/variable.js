@@ -1,3 +1,6 @@
+/**
+ * Scenario
+ */
 let scenarioImage;
 let scenario;
 
@@ -37,6 +40,9 @@ const bubbleEnemyMatrix = [
     [312, 626],
 ];
 
+/**
+ * Main Character
+ */
 let witchCharacter;
 let witchCharacterImage;
 let witchCharacterMatrix = [
@@ -57,9 +63,11 @@ let witchCharacterMatrix = [
     [440, 810],
     [660, 810],
 ];
-
 let mainCharacterHeight = 135;
 
+/**
+ * Sounds
+ */
 let gameAudio;
 let jumpAudio;
 let play = false;

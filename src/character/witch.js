@@ -22,7 +22,7 @@ class Witch extends AnimationDraw {
     }
 
     checkCollision(enemy) {
-        const precision = .7;
+        const precision = .65;
         return collideRectRect(
             this.x, 
             this.y, 
