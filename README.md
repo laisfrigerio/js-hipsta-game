@@ -2,9 +2,14 @@
 
 A bruxinha hipsta está totalmente perdida na floresta e constantemente fugindo das gotinhas de vírus (corona vírus).
 
-## Aula 1 - Imersão GAME DEV Alura
+## Imersão GAME DEV Alura
 
-![Aula 1 - Alura Imersão Game Dev](https://raw.githubusercontent.com/laisfrigerio/js-hipsta-game/master/screenshots/first-class.gif)
+![Aula 2 - Alura Imersão Game Dev](https://raw.githubusercontent.com/laisfrigerio/js-hipsta-game/master/screenshots/second-class.gif)
+
+## Gifs
+
+- [Aula 01](https://raw.githubusercontent.com/laisfrigerio/js-hipsta-game/master/screenshots/first-class.gif)
+- [Aula 02](https://raw.githubusercontent.com/laisfrigerio/js-hipsta-game/master/screenshots/second-class.gif) 
 
 ## Tecnologias
 
