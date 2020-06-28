@@ -6,7 +6,7 @@ class InitialScreen {
     draw() {
         this._showBackgroundImage();
         this._text();
-        this._button();
+        this.btn.draw();
     }
 
     _showBackgroundImage() {
@@ -22,9 +22,5 @@ class InitialScreen {
 
         textSize(150);
         text("Hipsta", (width / 2), height / 2);
-    }
-
-    _button() {
-        this.btn.draw();
     }
 }

@@ -11,7 +11,6 @@ function setup() {
      * Game
      */
     game = new Game();
-    game.init();
 
     scenes = {
         game,

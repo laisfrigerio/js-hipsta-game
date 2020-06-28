@@ -9,8 +9,4 @@ class Button {
     addClass(className) {
         this.element.addClass(className);
     }
-
-    setY(y) {
-        this.y = y;
-    }
 }

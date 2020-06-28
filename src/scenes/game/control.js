@@ -1,26 +1,35 @@
 const $pause = document.querySelector("#pause");
-const $play = document.querySelector("#play");
+const $restart = document.querySelector("#restart");
+const $start = document.querySelector(".start-game");
+const $control = document.querySelector(".control");
 
-$pause.disabled = true;
-
-$play.addEventListener('click', () => {
+$restart.addEventListener('click', () => {
     playSound();
-    $play.disabled = true;
-    $pause.disabled = false;
 });
 
 $pause.addEventListener('click', () => {
     pauseSound();
-    $pause.disabled = true;
-    $play.disabled = false;
 });
+
+function enableRestartGame() {
+    $pause.disabled = true;
+    $restart.disabled = false;
+}
+
+function enablePauseGame() {
+    $restart.disabled = true;
+    $pause.disabled = false;
+    $control.classList.add("show");
+}
 
 function playSound() {
     gameAudio.loop();
     play = true;
+    enablePauseGame();
 }
 
 function pauseSound() {
     gameAudio.pause();
     play = false;
+    enableRestartGame();
 }

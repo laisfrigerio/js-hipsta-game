@@ -1,5 +1,5 @@
 class Game {
-    constructor() {}
+    constructor() { }
 
     draw () {
         enemy = enemies[enemyShow];
