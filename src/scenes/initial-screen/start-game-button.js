@@ -1,7 +1,10 @@
-class StartGameButton extends Button {
+class StartGameButton {
     constructor() {
-        super("Iniciar", width/2, height / 7 * 5);
-        this.addClass("start-game");
+        this.text = "Iniciar";
+        this.x =  width/2;
+        this.y = height / 7 * 5;
+        this.element = createButton(this.text);
+        this.element.addClass("start-game");
     }
 
     draw() {
