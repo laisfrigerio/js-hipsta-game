@@ -1,8 +1,8 @@
 class Witch extends AnimationDraw {
 
-    constructor(matrix, image, x, widthWitch, heightWitch, widthSprite, heightSprite) {
-        super(matrix, image, x, widthWitch, heightWitch, widthSprite, heightSprite);
-        this.yInital = height - this.height;
+    constructor(matrix, image, x, yRange, widthWitch, heightWitch, widthSprite, heightSprite) {
+        super(matrix, image, x, yRange, widthWitch, heightWitch, widthSprite, heightSprite);
+        this.yInital = height - this.height - yRange;
         this.y = this.yInital;
         this.jumpVelocity = 0;
         this.gravity = 3;

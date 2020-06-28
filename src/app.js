@@ -15,10 +15,12 @@ function draw() {
     scenario.show();
     witchCharacter.show(play);
     bubbleEnemy.show(play);
+    troll.show(play);
     if (play) {
         scenario.move();
         witchCharacter.applyGravity();
         bubbleEnemy.move();
+        troll.move();
         if (witchCharacter.checkCollision(bubbleEnemy)) {
             pauseSound();
             gameOver();
