@@ -2,37 +2,45 @@ function setup() {
     createCanvas(windowWidth - 100, windowHeight - 200);
     frameRate(100);
     scenario = new Scenario(scenarioImage, 3);
-    witchCharacter = new Witch(matrixCharacter, characterImage, 0, 110, mainCharacterHeight, 220, 270);
-    enemy = new Bubble(matrixEnemy, enemyImage, width - 52, 52, 52, 104, 104);
+    witchCharacter = new Witch(witchCharacterMatrix, witchCharacterImage, 0, 110, mainCharacterHeight, 220, 270);
+    bubbleEnemy = new Bubble(bubbleEnemyMatrix, bubbleEnemyImage, width - 52, 52, 52, 104, 104);
 }
 
 function keyPressed() {
     if (key === 'ArrowUp') {
         witchCharacter.jump();
+        jumpAudio.play();
     }
 }
 
 function draw() {
     scenario.show();
     witchCharacter.show(play);
-    enemy.show(play);
+    bubbleEnemy.show(play);
     if (play) {
         scenario.move();
         witchCharacter.applyGravity();
-        enemy.move();
-
-        if (witchCharacter.checkCollision(enemy)) {
-            console.log('is colliding')
+        bubbleEnemy.move();
+        if (witchCharacter.checkCollision(bubbleEnemy)) {
+            pauseSound();
         }
     }
 }
 
 document.querySelector("#play").addEventListener('click', () => {
-    gameAudio.loop();
-    play = true;
+    playSound();
 });
 
 document.querySelector("#pause").addEventListener('click', () => {
+    pauseSound();
+});
+
+function playSound() {
+    gameAudio.loop();
+    play = true;
+}
+
+function pauseSound() {
     gameAudio.pause();
     play = false;
-});
+}

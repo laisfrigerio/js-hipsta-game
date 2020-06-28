@@ -22,6 +22,16 @@ class Witch extends AnimationDraw {
     }
 
     checkCollision(enemy) {
-        return collideRectRect(this.x, this.y, this.width, this.height, enemy.x, enemy.y, enemy.width, enemy.height);
+        const precision = .7;
+        return collideRectRect(
+            this.x, 
+            this.y, 
+            this.width * precision, 
+            this.height * precision, 
+            enemy.x, 
+            enemy.y, 
+            enemy.width * precision, 
+            enemy.height * precision
+        );
     }
 }

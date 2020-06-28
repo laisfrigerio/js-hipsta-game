@@ -1,6 +1,7 @@
 function preload() {
     scenarioImage  = loadImage("assets/images/scenario/jungle.png");
-    characterImage = loadImage("assets/images/character/running.png");
-    enemyImage = loadImage("assets/images/enemies/droplet.png");
+    witchCharacterImage = loadImage("assets/images/character/running.png");
+    bubbleEnemyImage = loadImage("assets/images/enemies/droplet.png");
     gameAudio = loadSound("assets/audios/game-track.mp3");
+    jumpAudio = loadSound("assets/audios/jumping-sound.mp3");
 }
