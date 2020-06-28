@@ -34,27 +34,3 @@ function draw() {
         });
     }
 }
-
-document.querySelector("#pause").disabled = true;
-
-document.querySelector("#play").addEventListener('click', () => {
-    playSound();
-    document.querySelector("#play").disabled = true;
-    document.querySelector("#pause").disabled = false;
-});
-
-document.querySelector("#pause").addEventListener('click', () => {
-    pauseSound();
-    document.querySelector("#pause").disabled = true;
-    document.querySelector("#play").disabled = false;
-});
-
-function playSound() {
-    gameAudio.loop();
-    play = true;
-}
-
-function pauseSound() {
-    gameAudio.pause();
-    play = false;
-}
