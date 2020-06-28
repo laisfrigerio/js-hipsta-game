@@ -5,6 +5,11 @@ let scenarioImage;
 let scenario;
 
 /**
+ * Game
+ */
+let game;
+
+/**
  * Enemies
  */
 let enemyShow;

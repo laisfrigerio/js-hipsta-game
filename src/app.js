@@ -1,32 +1,14 @@
 function setup() {
     createCanvas(windowWidth - 100, windowHeight - 200);
     frameRate(100);
-    init();
+    game = new Game();
+    game.init();
 }
 
 function keyPressed() {
-    if (key === 'ArrowUp') {
-        witchCharacter.jump();
-        jumpAudio.play();
-    }
+    game.keyPressed(key);
 }
 
 function draw() {
-    enemy = enemies[enemyShow];
-    scenario.show();
-    witchCharacter.show(play);
-    pointing.show();
-    enemy.show(play);
-
-    if (play) {
-        pointing.add();
-        scenario.move();
-        witchCharacter.applyGravity();
-
-        enemy.move();
-        if (witchCharacter.checkCollision(enemy)) {
-            pauseSound();
-            gameOver();
-        }
-    }
+    game.draw();
 }
