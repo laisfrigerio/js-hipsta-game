@@ -35,8 +35,8 @@ function init() {
     pointing = new Pointing();
     witchCharacter = new Witch(witchCharacterMatrix, witchCharacterImage, 0, 30, 110, mainCharacterHeight, 220, 270);
     bubbleEnemy = new Bubble(bubbleEnemyMatrix, bubbleEnemyImage, width - 52, 30, 52, 52, 104, 104, 10, 200);
-    flyingEnemy = new Bubble(flyingEnemyMatrix, flyingEnemyImage, width, 100, 52, 52, 200, 150, 10, 2000);
-    troll = new Troll(trollMatrix, trollImage, width, 0, 200, 200, 400, 400, 10, 3500);
+    flyingEnemy = new Bubble(flyingEnemyMatrix, flyingEnemyImage, width, 100, 52, 52, 200, 150, 10, 400);
+    troll = new Troll(trollMatrix, trollImage, width, 0, 200, 200, 400, 400, 10, 500);
     enemies = [];
     enemies.push(bubbleEnemy, flyingEnemy, troll);
 }

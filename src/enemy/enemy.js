@@ -12,6 +12,11 @@ class Enemy extends AnimationDraw {
             if (enemyShow > (enemies.length - 1)) {
                 enemyShow = 0;
             }
+            enemies[enemyShow].changeVelocity();
         }
+    }
+
+    changeVelocity() {
+        this.velocity = parseInt(random(10, 30));
     }
 }
