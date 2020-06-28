@@ -9,7 +9,7 @@ A bruxinha hipsta está totalmente perdida na floresta e constantemente fugindo 
 ## Gifs
 
 - [Aula 01](https://raw.githubusercontent.com/laisfrigerio/js-hipsta-game/master/screenshots/first-class.gif)
-- [Aula 02](https://raw.githubusercontent.com/laisfrigerio/js-hipsta-game/master/screenshots/second-class.gif) 
+- [Aula 02](https://raw.githubusercontent.com/laisfrigerio/js-hipsta-game/aula-02/screenshots/second-class.gif) 
 
 ## Tecnologias
 
