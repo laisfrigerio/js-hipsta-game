@@ -152,3 +152,8 @@ let play = false;
  * Points
  */
 let pointing;
+
+/**
+ * Health
+ */
+let healthImage;

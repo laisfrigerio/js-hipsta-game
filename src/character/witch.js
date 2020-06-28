@@ -7,6 +7,7 @@ class Witch extends AnimationDraw {
         this.jumpVelocity = 0;
         this.gravity = 3;
         this.skips = 0;
+        this.isInvincible = false;
     }
 
     jump () {
@@ -14,6 +15,11 @@ class Witch extends AnimationDraw {
             this.jumpVelocity = -35;
             this.skips++;
         }
+    }
+
+    makeInvincible() {
+        this.isInvincible = true;
+        setTimeout(() => { this.isInvincible = false; }, 1000);
     }
 
     applyGravity () {
@@ -27,6 +33,9 @@ class Witch extends AnimationDraw {
     }
 
     checkCollision(enemy) {
+        console.log('this.isInvincible ', this.isInvincible);
+        if (this.isInvincible) return false;
+
         const precision = .65;
         return collideRectRect(
             this.x, 

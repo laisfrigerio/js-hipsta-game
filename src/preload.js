@@ -9,4 +9,6 @@ function preload() {
 
     initialScreenImage = loadImage("assets/images/scenario/initial-screen.png");
     initialScreenFont = loadFont("assets/fonts/initial-screen.otf");
+
+    healthImage = loadImage("assets/images/health/heart.png");
 }
