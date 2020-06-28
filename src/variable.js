@@ -8,6 +8,7 @@ let scenario;
  * Game
  */
 let game;
+let configFile;
 
 /**
  * Inital Screen

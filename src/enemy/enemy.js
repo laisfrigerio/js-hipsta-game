@@ -6,19 +6,27 @@ class Enemy extends AnimationDraw {
 
     move() {
         this.x -= this.velocity;
+        // if (this.x < -this.width) {
+        //     this.x = width;
+        //     enemyShow++;
+
+        //     if (enemyShow > (enemies.length - 1)) {
+        //         enemyShow = 0;
+        //     }
+
+        //     enemies[enemyShow].changeVelocity();
+        // }
         if (this.x < -this.width) {
             this.x = width;
-            enemyShow++;
+            game.index++;
 
-            if (enemyShow > (enemies.length - 1)) {
-                enemyShow = 0;
+            if (game.index > (game.map.length - 1)) {
+                game.index = 0;
             }
-
-            enemies[enemyShow].changeVelocity();
         }
     }
 
-    changeVelocity() {
-        this.velocity = parseInt(random(10, 25));
+    reappear() {
+        this.x = width;
     }
 }

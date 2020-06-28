@@ -11,4 +11,5 @@ function preload() {
     initialScreenFont = loadFont("assets/fonts/initial-screen.otf");
 
     healthImage = loadImage("assets/images/health/heart.png");
+    configFile = loadJSON("assets/config.json");
 }
