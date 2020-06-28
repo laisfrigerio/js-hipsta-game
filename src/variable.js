@@ -71,4 +71,3 @@ let mainCharacterHeight = 135;
 let gameAudio;
 let jumpAudio;
 let play = false;
-let gameOver = false;
