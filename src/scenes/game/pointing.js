@@ -11,6 +11,6 @@ class Pointing {
     }
 
     add() {
-        this.total += 0.2;
+        this.total = this.total + 0.2;
     }
 }

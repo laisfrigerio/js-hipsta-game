@@ -12,13 +12,13 @@ class Health {
         text(this.total, 60, 25);
     }
 
-    increment() {
+    add() {
         if (this.total < this.maximum) {
             this.total++;
         }
     }
 
-    decrement() {
+    remove() {
         this.total--;
     }
 }

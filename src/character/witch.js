@@ -33,7 +33,6 @@ class Witch extends AnimationDraw {
     }
 
     checkCollision(enemy) {
-        console.log('this.isInvincible ', this.isInvincible);
         if (this.isInvincible) return false;
 
         const precision = .65;

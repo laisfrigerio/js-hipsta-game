@@ -9,14 +9,16 @@ class Enemy extends AnimationDraw {
         if (this.x < -this.width) {
             this.x = width;
             enemyShow++;
+
             if (enemyShow > (enemies.length - 1)) {
                 enemyShow = 0;
             }
+
             enemies[enemyShow].changeVelocity();
         }
     }
 
     changeVelocity() {
-        this.velocity = parseInt(random(10, 30));
+        this.velocity = parseInt(random(10, 25));
     }
 }

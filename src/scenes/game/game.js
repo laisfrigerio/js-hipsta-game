@@ -1,7 +1,5 @@
 class Game {
-    constructor() { 
-        this.health = null;
-    }
+    constructor() { }
 
     draw () {
         enemy = enemies[enemyShow];
@@ -9,22 +7,23 @@ class Game {
         witchCharacter.show(play);
         pointing.show();
         enemy.show(play);
-        this.health.draw();
+        health.draw();
 
         if (play) {
-            pointing.add();
             scenario.move();
             witchCharacter.applyGravity();
 
             enemy.move();
             if (witchCharacter.checkCollision(enemy)) {
-                this.health.decrement();
+                health.remove();
                 witchCharacter.makeInvincible();
 
-                if (this.health.total === 0) {
+                if (health.total === 0) {
                     pauseSound();
                     gameOver();
                 }
+            } else {
+                pointing.add();
             }
         }
     }
@@ -37,7 +36,7 @@ class Game {
         enemyShow = 0;
         scenario = new Scenario(scenarioImage, 3);
         pointing = new Pointing();
-        this.health = new Health(3, 100);
+        health = new Health(3, 100);
         witchCharacter = new Witch(witchCharacterMatrix, witchCharacterImage, 0, 30, 110, mainCharacterHeight, 220, 270);
         bubbleEnemy = new Bubble(bubbleEnemyMatrix, bubbleEnemyImage, width - 52, 30, 52, 52, 104, 104, 10, 200);
         flyingEnemy = new Bubble(flyingEnemyMatrix, flyingEnemyImage, width, 100, 52, 52, 200, 150, 10, 400);

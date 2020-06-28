@@ -156,4 +156,5 @@ let pointing;
 /**
  * Health
  */
+let health
 let healthImage;
