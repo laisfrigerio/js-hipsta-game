@@ -6,10 +6,14 @@ class Witch extends AnimationDraw {
         this.y = this.yInital;
         this.jumpVelocity = 0;
         this.gravity = 3;
+        this.skips = 0;
     }
 
     jump () {
-        this.jumpVelocity = -30;
+        if (this.skips < 2) {
+            this.jumpVelocity = -30;
+            this.skips++;
+        }
     }
 
     applyGravity () {
@@ -18,6 +22,7 @@ class Witch extends AnimationDraw {
 
         if (this.y > this.yInital) {
             this.y = this.yInital;
+            this.skips = 0;
         }
     }
 

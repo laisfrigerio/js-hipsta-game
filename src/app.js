@@ -14,26 +14,39 @@ function keyPressed() {
 function draw() {
     scenario.show();
     witchCharacter.show(play);
-    bubbleEnemy.show(play);
-    troll.show(play);
+    pointing.show();
+
+    enemies.forEach(enemy => {
+        enemy.show(play);
+    });
+
     if (play) {
+        pointing.add();
         scenario.move();
         witchCharacter.applyGravity();
-        bubbleEnemy.move();
-        troll.move();
-        if (witchCharacter.checkCollision(bubbleEnemy)) {
-            pauseSound();
-            gameOver();
-        }
+
+        enemies.forEach(enemy => {
+            enemy.move();
+            if (witchCharacter.checkCollision(enemy)) {
+                pauseSound();
+                gameOver();
+            }
+        });
     }
 }
 
+document.querySelector("#pause").disabled = true;
+
 document.querySelector("#play").addEventListener('click', () => {
     playSound();
+    document.querySelector("#play").disabled = true;
+    document.querySelector("#pause").disabled = false;
 });
 
 document.querySelector("#pause").addEventListener('click', () => {
     pauseSound();
+    document.querySelector("#pause").disabled = true;
+    document.querySelector("#play").disabled = false;
 });
 
 function playSound() {
