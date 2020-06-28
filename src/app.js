@@ -12,25 +12,21 @@ function keyPressed() {
 }
 
 function draw() {
+    enemy = enemies[enemyShow];
     scenario.show();
     witchCharacter.show(play);
     pointing.show();
-
-    enemies.forEach(enemy => {
-        enemy.show(play);
-    });
+    enemy.show(play);
 
     if (play) {
         pointing.add();
         scenario.move();
         witchCharacter.applyGravity();
 
-        enemies.forEach(enemy => {
-            enemy.move();
-            if (witchCharacter.checkCollision(enemy)) {
-                pauseSound();
-                gameOver();
-            }
-        });
+        enemy.move();
+        if (witchCharacter.checkCollision(enemy)) {
+            pauseSound();
+            gameOver();
+        }
     }
 }

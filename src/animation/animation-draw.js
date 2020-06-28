@@ -15,7 +15,17 @@ class AnimationDraw {
     }
 
     show (play) {
-        image(this.image, this.x, this.y, this.width, this.height, this.matrix[this.currentPostion][0], this.matrix[this.currentPostion][1], this.widthSprite, this.heightSprite);
+        image(
+            this.image, 
+            this.x, 
+            this.y, 
+            this.width, 
+            this.height, 
+            this.matrix[this.currentPostion][0], 
+            this.matrix[this.currentPostion][1],
+             this.widthSprite, 
+             this.heightSprite
+        );
         if (play) {
             this.animate();
         }

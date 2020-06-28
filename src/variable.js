@@ -7,6 +7,8 @@ let scenario;
 /**
  * Enemies
  */
+let enemyShow;
+let enemy;
 let bubbleEnemy;
 let bubbleEnemyImage;
 const bubbleEnemyMatrix = [

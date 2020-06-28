@@ -11,7 +11,7 @@ class Witch extends AnimationDraw {
 
     jump () {
         if (this.skips < 2) {
-            this.jumpVelocity = -30;
+            this.jumpVelocity = -35;
             this.skips++;
         }
     }
