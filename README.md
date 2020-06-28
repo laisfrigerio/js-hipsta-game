@@ -9,25 +9,15 @@ A bruxinha hipsta está totalmente perdida na floresta e constantemente fugindo 
 ## Tecnologias
 
 - p5js
-- webpack (compilar JS e CSS)
-- SCSS
-- http-server (Inícia um servidor local)
 
-## Run
+## Run local
 
-Execute os seguintes em duas abas no terminal seperadamente:
-
-- `npm run server`
-- `npm run build`
-
-## Alterações
-
-Neste momento, o servidor local não está reatualizando a página quando ocorre alterações no código. Portanto, é necessário executar o seguinte comando a cada nova alteração:
-
-- `npm run server`
-
-Além do mais, o `http-server` aplica chache nos arquivos de `css` e `js`. Logo, eu coloco um `query string` na importação dos respectivos arquivos (css e js) dentro do arquivo `public/index.html`
+Necessário um Live Server por conta do CORS (função loadImage do `p5js`)
 
 ## Comece a jogar
 
 Aperte o play!!!
+
+## Contribuidores
+
+[@Drete457](https://github.com/Drete457/) - Refatorei meu código seguindo seus conselhos e avancei na aula-02
