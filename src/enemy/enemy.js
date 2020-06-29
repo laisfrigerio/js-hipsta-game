@@ -6,16 +6,6 @@ class Enemy extends AnimationDraw {
 
     move() {
         this.x -= this.velocity;
-        // if (this.x < -this.width) {
-        //     this.x = width;
-        //     enemyShow++;
-
-        //     if (enemyShow > (enemies.length - 1)) {
-        //         enemyShow = 0;
-        //     }
-
-        //     enemies[enemyShow].changeVelocity();
-        // }
         if (this.x < -this.width) {
             this.x = width;
             game.index++;
@@ -24,9 +14,5 @@ class Enemy extends AnimationDraw {
                 game.index = 0;
             }
         }
-    }
-
-    reappear() {
-        this.x = width;
     }
 }
