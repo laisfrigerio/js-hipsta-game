@@ -5,7 +5,6 @@ class Game {
     }
 
     draw () {
-        // enemy = enemies[enemyShow];
         enemyShow = this.map[this.index];
         enemy = enemies[enemyShow.enemy];
         enemy.velocity = enemyShow.velocity;
